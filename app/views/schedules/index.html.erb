@@ -1,0 +1,6 @@
+    <% @games.each do |game| %>
+      <p>
+        <%= game.visiting_team.name -%> (<%= game.visiting_team.record -%>) &nbsp; <%= link_to('VS', "/games/show/#{game.identifier}") -%> &nbsp; <%= game.home_team.name -%> (<%= game.visiting_team.record -%> )<br/>
+        <div style='margin-left: 105px; margin-top: 5px;'><%= game.starts.strftime('%m/%d/%Y %H:%M') -%></div>
+      </p>
+    <% end %>
