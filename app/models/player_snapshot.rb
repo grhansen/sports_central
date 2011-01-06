@@ -1,7 +1,7 @@
 require 'ripple'
 
-class Stats
+class PlayerSnapshot
   include Ripple::EmbeddedDocument
 
-  property :stat_type, String
+  one :player
 end
